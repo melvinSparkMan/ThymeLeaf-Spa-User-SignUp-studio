@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add a user to the spa</title>
+   <style>
+      label {display: block;}
+      input {display: block; margin-bottom: 20px}
+   </style>
+</head>
+<body>
+
+   <form method="POST" th:action="@{/user}">
+      <label name="username">
+         User Name
+      </label>
+      <input type="text" name="username" th:value = "${name}" />
+
+      <label name="email">
+         Email
+      </label>
+      <input type="email" name="email" th:value = "${email}" />
+
+      <label name="password">
+         Password
+      </label>
+      <input type="password" name="password" th:value = "${password}" />
+
+      <label name="verify">
+         Verify password
+      </label>
+      <input type="password" name="verify" th:value = "${verify}" />
+
+      <input type="submit" text="submit" />
+
+
+   </form>
+</body>
+</html>
